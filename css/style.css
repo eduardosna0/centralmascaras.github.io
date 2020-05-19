@@ -1,0 +1,60 @@
+body{
+    background-color: #e9f7d7 !important;   
+}
+/*#e8f4fd*/
+.top-menu{
+    margin-bottom: 40px;
+}
+
+.tituloMenuInfos{
+    cursor: pointer;
+}
+
+footer{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;    
+    margin-top: auto;
+}
+
+#informacoesIndex h3{
+    font-size: 20px;
+}
+
+section{
+    margin-bottom: 20px;
+}
+
+#botao-fornecedores-home{
+    color: white;
+    text-decoration: none;
+}
+.lista-lojas{
+    margin-top: 30px;
+}
+
+.btn-meu-site{
+    background-color: #8ed138 !important;
+    border-color: #8ed138 !important;
+    font-weight: bold !important;
+}
+
+#filtrar-tabela {
+    width: 200px;
+    height: 35px;
+    margin-bottom: 10px;
+    }
+
+    
+.invisivel{
+    display: none;
+}
+
+.card-cor{
+    background-color: #e8f1da !important;
+}
+
+.card-cor-header{
+    background-color:  #a4c76b !important;
+
+}

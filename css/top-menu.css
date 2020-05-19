@@ -1,0 +1,57 @@
+
+.top-menu {
+    background-color: #9ab874;
+    overflow: hidden;
+  }
+  
+
+  .top-menu a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+
+  .top-menu a:hover {
+    background-color:  #6ab04c;
+    color: black;
+  }
+  
+
+  .top-menu a.active {
+    background-color: #8ed138;
+    color: white;
+  }
+  
+
+  .top-menu .icon {
+    display: none;
+  }
+
+
+@media screen and (max-width: 600px) {
+    .top-menu a:not(:first-child) {display: none;}
+    .top-menu a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  
+  @media screen and (max-width: 600px) {
+    .top-menu.responsive {position: relative;}
+    .top-menu.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .top-menu.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/top-menu.css">
+        <link rel="stylesheet" type="text/css" href="css/cadastro.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Central de Máscaras</title>
+    </head>
+    <body onload="getUf()">
+      <header>
+        
+        <div class="top-menu" id="myTop-menu">
+          <a href="index.html">Home</a>
+          <a href="lojas.html">Lojas</a>
+          <a href="cadastro.html" class="active">Cadastro</a>            
+          <a href="javascript:void(0);" class="icon" onclick="menuExpand()">
+            <i class="fa fa-angle-down" id="iconeTopMenu"></i>
+          </a>
+        </div>
+        
+        
+      </header>
+      <main>
+              
+        <!--Cadastro Formulario-->
+        <section class="container pagina-cadastro">
+            <h2 id="cadastro">Cadastro</h2>
+            <p>Você fornecedor ou doador de máscaras, faça o seu cadastro em nosso site agora utilizando o formulário abaixo.</p>
+          
+            
+          <form id="form-cadastro">
+            <div class="form-group row">
+              <label for="nomeForm" class="col-sm-2 col-form-label col-md-8 offset-md-2" id="formNomeLabel">Nome</label>
+              <div class="col-sm-10 col-md-8 offset-md-2">
+                <input type="text" name="NomeFormulario" id="nomeForm" class="form-control" placeholder="Eduardo Chaves">                    
+              </div>
+            </div>             
+                            
+            <fieldset class="form-group">
+              <div class="row">
+                <div class="col-sm-10 col-md-8 offset-md-2">
+                  <legend class="col-form-label pt-0">Pessoa Tipo</legend>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="pessoaFisica" value="Física" checked>
+                    <label class="form-check-label" for="pessoaFisica">
+                      Pessoa Física
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="pessoaJuridica" value="Jurídica">
+                    <label class="form-check-label" for="pessoaJuridica">
+                      Pessoa Jurídica
+                    </label>
+                  </div>                      
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="form-group row">
+              <div class="col-sm-10 col-md-8 offset-md-2" id="cpf">
+                <label for="cpfForm" class="col-form-label" id="cpfLabel">CPF</label>
+                <input name="cpfInput" type="text" class="form-control" id="cpfForm" placeholder="000.000.000-00" onkeydown="fMasc(this, mCPF)">
+              </div>  
+              
+              <div class="col-sm-10 col-md-8 offset-md-2 invisivel" id="cnpj">
+                <label for="cnpjForm" class="col-form-label" id="cpfCnpjLabel">CNPJ</label>
+                <input name="cnpjInput" type="text" class="form-control" id="cnpjForm" placeholder="00.000.000/0001-00" onkeydown="fMasc(this, mCNPJ)">
+              </div>                           
+            </div>
+            
+            <div class="form-group row">
+              <div class="col-sm-10 col-md-8 offset-md-2">
+                <label for="enderecoForm" class="col-form-label">Endereço</label>
+                <input type="text" class="form-control" id="enderecoForm" placeholder="Rua Miosótis, Nº 1500, Santo André">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              
+              <div class="col-sm-10 col-md-8 offset-md-2">
+                <label for="cidadeForm" class="col-form-label">Cidade</label>
+                <input type="text" class="form-control" id="cidadeForm" placeholder="Belo Horizonte">
+              </div>
+            </div>
+            
+            <div class="form-group row">
+              <div class="col-md-2 col-md-8 offset-md-2">
+                <label for="ufForm" class="col-form-label">Estado</label>
+                <select class="form-control" id="ufForm">
+                  <option disabled selected>UF</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">              
+              <div class="col-sm-10 col-md-8 offset-md-2">
+                <label for="cepForm" class="col-form-label">CEP</label>
+                <input type="text" class="form-control" id="cepForm" placeholder="31230-180" onkeydown="fMasc(this, mCEP)">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-sm-10 col-md-8 offset-md-2">
+                <label for="contatoForm" class="col-form-label">Telefone</label>
+                <input type="text" class="form-control" id="contatoForm" placeholder="(31) 991806621" onkeydown="fMasc(this, mTel)">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-sm-10 col-md-8 offset-md-2">
+                <label for="emailForm" class="col-form-label">Email</label>
+                <input type="email" class="form-control" id="emailForm" placeholder="email@dominio.com">
+              </div>             
+            </div>
+
+            <div class="form-group row">
+              <div class="col-md-2 col-md-8 offset-md-2">
+                <label for="uf-form" class="col-form-label">É Doador?</label>
+                <select class="form-control" id="isDoador">                  
+                  <option selected value="false">Não</option>
+                  <option value="true">Sim</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group row">
+              <div class="col-sm-10 col-md-8 offset-md-2">
+                <button id="submit-formulario" type="submit" class="btn btn-primary btn-meu-site">Salvar</button>
+              </div>
+            </div>
+            
+            <div class="box-mensagens">
+              <ul id="mensagens-erro"></ul>              
+            </div>
+            <div class="col-sm-10 col-md-8 offset-md-2">
+              <div id="mensagem-sucesso" class="invisivel">Cadastrado com Sucesso</div>             
+            </div>
+
+          </form>
+
+          <p>Assim que seu cadastro for recebido, ele será incluso em nosso site e você poderá visualizar na página de lojas.</p>
+            
+        </section>
+      </main>        
+      <footer>
+        <p>Para mais informações, entre em contato:</p>
+        <address>
+          <strong>Eduardo Chaves</strong><br>
+          Rua Miosotis, 317 - Santo André<br>
+          Belo Horizonte - MG <br> 
+          Tel: (31) 991806621
+      </address>
+      <address>
+          Email: <a href="mailto:eduardosna0@gmail.com">eduardosna0@gmail.com</a>
+      </address>
+      </footer> 
+  
+     
+    
+    </body>
+    <script src="js/jquery.js"></script>    
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/get-ufs.js"></script>
+    <script src="js/form-cadastro.js"></script>
+    <script src="js/mascaras.js"></script>
+    <script src="js/funcoes-lib.js"></script>
+    
+
+   
+
+</html>

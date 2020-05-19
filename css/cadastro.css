@@ -1,0 +1,36 @@
+.pagina-cadastro h2, .pagina-cadastro p {
+    text-align: center;
+}
+
+
+
+#mensagens-erro{
+	color: red;
+    margin-bottom: 10px;
+    text-align: center;	
+}
+
+ul {
+    list-style-type: none;
+}
+
+#mensagens-erro li {
+    margin: 5px;
+    text-decoration: none;
+    font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+
+}
+
+#mensagem-sucesso{
+    background-color: #4CAF50;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 20px;    
+    color: white;
+    margin-bottom: 15px;
+}
+
+

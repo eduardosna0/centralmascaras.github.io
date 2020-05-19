@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/top-menu.css">
+        <link rel="stylesheet" type="text/css" href="css/card.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Central de Máscaras</title>
+    </head>
+    <body onload="getLojasHome()">
+      <header>
+        <nav>
+          <div class="top-menu" id="myTop-menu">
+            <a href="index.html" class="active">Home</a>
+            <a href="lojas.html">Lojas</a>
+            <a href="cadastro.html">Cadastro</a>            
+            <a href="javascript:void(0);" class="icon" onclick="menuExpand()">
+              <i class="fa fa-angle-down" id="iconeTopMenu"></i>
+            </a>
+          </div>
+        </nav>     
+        
+        
+      </header>
+      <main>
+
+        <section class="container">
+          <h2 id="sobre-o-site">Sobre o Site</h2>
+          <p>Devido a pandemia do corona vírus a busca por máscaras de rosto, descartáveis ou de tecido, aumentaram drásticamente.</p>
+          <p>Em muitas cidades o uso da máscara se tornou obrigatório, como em Belo Horizonte: <a href="https://prefeitura.pbh.gov.br/noticias/uso-de-mascaras-passa-ser-obrigatorio-partir-da-proxima-quarta-feira-dia-22">"Uso de máscaras passa a ser obrigatório",</a> e 
+          isto faz com que algumas pessoas não saibam onde adquirir estas máscaras.</p>
+          <p>Este site tem o intuito de centralizar os vendedores e doadores de máscaras espalhados pela sua cidade, sendo ele uma grande ou trabalhador individual.</p>
+
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="img/mascara-png.jpg" alt="Use Máscaras">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Central de Máscaras</h5>
+                  <p>Não perca tempo e cadastre-se em nosso site para outros usuários encontrarem sua loja!</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/alcool-gel.jpg" alt="Alcool Gel">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Previna-se</h5>
+                  <p>Não esqueça de se higienizar sempre que voltar para casa! Pense na sua Família</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/pessoa-mascara.jpg" alt="Pessoa Máscara">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Fique Calmo!</h5>
+                  <p>Juntos iremos superar este problema!</p>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Próximo</span>
+            </a>
+          </div>        
+
+        </section>
+
+        <section class="container">                        
+          <div class="row">            
+              <div class="col-lg-6">
+                <div class="card-header card card-cor-header">
+                  <h2>Soluções</h2>            
+                  <p>Veja nossas soluções que fornecemos para nossos usuários!</p> 
+                </div>             
+                <div class="accordion" id="informacoesIndex">
+                  <div class="card">                  
+                    <div class="card-header card-cor" id="headingComprador">
+                      <h3 class="mb-0">
+                      <div data-toggle="collapse" data-target="#consumidor" aria-expanded="true" aria-controls="consumidor" class="tituloMenuInfos">
+                        Para Usuários
+                      </div>
+                      </h3>
+                    </div>
+                    <div id="consumidor" class="collapse" aria-labelledby="headingComprador" data-parent="#informacoesIndex">
+                      <div class="card-body">
+                        <p>Você consumidor consegue ver uma lista das lojas já cadastradas em nosso site com o contato e endereço onde se encontram.
+                          Veja todas as lojas disponíveis <a href="lojas.html">aqui!</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">                  
+                    <div class="card-header card-cor" id="headingFornecedor">
+                      <h3 class="mb-0">
+                        <div data-toggle="collapse" data-target="#fornecedor" aria-expanded="true" aria-controls="fornecedor" class="tituloMenuInfos">                        
+                          Para Fornecedores
+                        </div>
+                      </h3>
+                    </div>
+                    <div id="fornecedor" class="collapse" aria-labelledby="headingFornecedor" data-parent="#informacoesIndex">
+                      <div class="card-body">
+                        <p>Você fornecedor que deseja se cadastrar, basta ir no formulário de cadastro e realizar o cadastro de sua loja.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+            </div>
+            <div class="col-lg-6">
+              <div class="card">              
+                <div class="card-header card-cor-header">
+                  <h2>Novidades</h2>
+                </div>            
+                <div class="card-body">
+                  <p>
+                    Se você não vende/doa máscaras mas mexe com algum produto relacionado à higiene, como por exemplo venda de Alcool em Gel, 
+                    saiba que estamos trabalhando para que sua loja também seja inserida e diferenciada das de máscaras em nosso site.
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+          </div>              
+        </section>
+        
+        <section class="container">
+          <h3>Lojas</h3>
+          <div class="row row-cols-1 row-cols-md-3 lista-lojas">
+            <div class="invisivel impossivel-carregar">
+              <p>Não foi possível carregar as lojas do banco de dados. Favor tentar novamente mais tarde.</p>
+
+              </div>                     
+          </div>
+            
+          
+          
+          <div type="button" class="btn btn-primary btn-lg">
+            <a href="lojas.html" id="botao-fornecedores-home">Veja todas os fornecedores cadastrados</a>
+          </div>
+        </section>
+        
+        
+        <section class="container">
+          <h4>Cadastro</h4>
+          <p>Para se cadastrar em nosso site, você sendo um Doador ou Loja que vende máscaras, acesse
+            a nossa página de cadastro: <a href="cadastro.html">Cadastro</a>
+          </p>
+        </section>
+
+               
+      </main>    
+      
+      <footer>
+        <p>Para mais informações, entre em contato:</p>
+        <address>
+          <strong>Eduardo Chaves</strong><br>
+          Rua Miosotis, 317 - Santo André<br>
+          Belo Horizonte - MG <br> 
+          Tel: (31) 991806621
+      </address>
+      <address>
+          Email: <a href="mailto:eduardosna0@gmail.com">eduardosna0@gmail.com</a>
+      </address>
+      </footer>     
+              
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="js/monta-lojas.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/apiLojas.js"></script>
+   
+   
+   
+
+</html>

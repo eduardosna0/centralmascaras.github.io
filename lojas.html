@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/card.css">
+        <link rel="stylesheet" type="text/css" href="css/top-menu.css">        
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Central de Máscaras</title>
+    </head>
+    <body onload="getApi()">
+      <header>
+        
+        <nav>
+          <div class="top-menu" id="myTop-menu">
+            <a href="index.html">Home</a>
+            <a href="lojas.html" class="active">Lojas</a>
+            <a href="cadastro.html">Cadastro</a>            
+            <a href="javascript:void(0);" class="icon" onclick="menuExpand()">
+              <i class="fa fa-angle-down" id="iconeTopMenu"></i>
+            </a>
+          </div>
+        </nav>
+        
+        
+      </header>
+      <main>        
+        
+        <section class="container">
+          <h3>Lojas</h3>
+          
+          
+          <div class="row row-cols-1 row-cols-md-3 lista-lojas">           
+          </div>
+                               
+        </section>
+        <section class="container">
+          <h3>Novidades</h3>
+          <p>Nós estamos já com as próximas melhorias previstas que já estão sendo implementadas:</p>
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <div data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Doadores
+                  </div>                  
+                </h5>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                  Em breve será possível diferenciar os Doadores de Produtos dos vendedores. Estamos trabalhando nisso para que esta melhoria ficar disponível em breve.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <div class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Tipo de Loja                    
+                  </div>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                  Estamos trabalhando também para poder diferenciar na listagem de lojas, em qual área sua loja está atuando. Possibilitando até aumentar
+                  este site para receber além de doadores e vendedores de máscaras, vendedores locais que tiveram seu alcance reduzido devido a quarentena.
+                </div>
+              </div>
+            </div>            
+          </div>                            
+        </section>
+
+        <section class="container">
+          <h4>Cadastro</h4>
+          <p>Não perca tempo, cadastre a sua loja também: <a href="cadastro.html">Cadastro</a>
+          </p>
+        </section>
+
+              
+       
+      </main>        
+      <footer>
+        <p>Para mais informações, entre em contato:</p>
+        <address>
+          <strong>Eduardo Chaves</strong><br>
+          Rua Miosotis, 317 - Santo André<br>
+          Belo Horizonte - MG <br> 
+          Tel: (31) 991806621
+      </address>
+      <address>
+          Email: <a href="mailto:eduardosna0@gmail.com">eduardosna0@gmail.com</a>
+      </address>
+      </footer> 
+  
+     
+    
+    </body>
+    <script src="js/jquery.js"></script>
+    
+    <script src="js/apiLojas.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/monta-lojas.js"></script>
+    
+   
+
+</html>
